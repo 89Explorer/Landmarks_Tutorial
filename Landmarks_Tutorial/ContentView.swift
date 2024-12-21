@@ -11,23 +11,15 @@ import CoreData
 struct ContentView: View {
     
     var body: some View {
-        VStack {
-            VStack {
-                Text("Turtle Rock")
-                    .font(.largeTitle)
-                    
-                Text("Hello, Man!")
-                    .fontWeight(.black)
-                    .foregroundColor(Color.red)
-                
-            }
-            Text("Hello, Man!")
-            Text("Hello, Man!")
-            Text("Hello, Man!")
+        VStack(alignment: .leading) {
+            Text("Turtle Rock")
+                .font(.title)
             HStack {
-                Text("Hello, Man!")
-                Text("Hello, Man!")
-                Text("Hello, Man!")
+                Text("Joshua Tree National Park")
+                    .font(.subheadline)
+                Spacer()
+                Text("California")
+                    .font(.subheadline)
             }
         }
         .padding()
