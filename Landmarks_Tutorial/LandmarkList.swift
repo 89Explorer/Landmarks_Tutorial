@@ -13,12 +13,13 @@ struct LandmarkList: View {
         NavigationSplitView {
             List(landmarks) { landmark in
                 NavigationLink {
-                    LandmarkDetail()
-                }label: {
+                    LandmarkDetail(landmark: landmark)
+                } label: {
                     LandmarkRow(landmark: landmark)
                 }
             }
             .navigationTitle("Landmarks")
+            
         } detail: {
             Text("Select a Landmark")
         }
