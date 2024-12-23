@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct Landmarks_TutorialApp: App {
-    let persistenceController = PersistenceController.shared
+   
+    @State private var modelData = ModelData()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(modelData)
         }
     }
 }
